@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Iris Prediction</title>
+</head>
+
+<body>
+    <h1>
+        <div style="text-align:center">
+            <font color="red">Iris Class Prediction</font>
+        </div>
+    </h1>
+    <hr></br>
+    <h3>
+        Some lines that looks like description but are not.
+    </h3>
+    <hr></br>
+
+    <div class='container'>
+        <div class='row'>
+            <div class='col-6'>
+                <form method="POST" action='/predict'>
+
+                    <div class="form-group">
+                        <label for='SepalLength'>
+                            <p class='font-weight-bold'>Sepal Length</p>
+                        </label>
+                        <input type='text' name="SepalLength">
+                        <small id='NYHelp' class='form-text text-muted'>Enter the Sepal Length</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='SepalWidth'>
+                            <p class='font-weight-bold'>SepalWidth</p>
+                        </label>
+                        <input type='text' name="SepalWidth">
+                        <small id='NYHelp' class='form-text text-muted'>Enter the Sepal Width</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='PetalLength'>
+                            <p class='font-weight-bold'>PetalLength</p>
+                        </label>
+                        <input type='text' name="PetalLength">
+                        <small id='NYHelp' class='form-text text-muted'>Enter the Petal Length</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='PetalWidth'>
+                            <p class='font-weight-bold'>PetalWidth</p>
+                        </label>
+                        <input type='text' name="PetalWidth">
+                        <small id='NYHelp' class='form-text text-muted'>Enter the Petal Width>
+                        </small>
+                    </div>
+
+                    <input class='btn btn-primary' type='submit' value='Submit'>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
