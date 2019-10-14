@@ -3,72 +3,75 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Iris Prediction</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 
 <body>
-    <h1>
-        <div style="text-align:center">
-            <font color="red">Iris Class Prediction</font>
-        </div>
-    </h1>
-    <hr></br>
-    <h3>
-        Some lines that looks like description but are not.
-    </h3>
-    <hr></br>
-
     <div class='container'>
-        <div class='row'>
-            <div class='col-6'>
-                <form method="POST" action='/predict'>
 
-                    <div class="form-group">
-                        <label for='SepalLength'>
-                            <p class='font-weight-bold'>Sepal Length</p>
-                        </label>
-                        <input type='text' name="SepalLength">
-                        <small id='NYHelp' class='form-text text-muted'>Enter the Sepal Length</small>
-                    </div>
+        <div class="heading">
+            <h1>
+                Iris Class Prediction
+            </h1>
+        </div>
 
-                    <div class="form-group">
-                        <label for='SepalWidth'>
-                            <p class='font-weight-bold'>SepalWidth</p>
-                        </label>
-                        <input type='text' name="SepalWidth">
-                        <small id='NYHelp' class='form-text text-muted'>Enter the Sepal Width</small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for='PetalLength'>
-                            <p class='font-weight-bold'>PetalLength</p>
-                        </label>
-                        <input type='text' name="PetalLength">
-                        <small id='NYHelp' class='form-text text-muted'>Enter the Petal Length</small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for='PetalWidth'>
-                            <p class='font-weight-bold'>PetalWidth</p>
-                        </label>
-                        <input type='text' name="PetalWidth">
-                        <small id='NYHelp' class='form-text text-muted'>Enter the Petal Width>
-                        </small>
-                    </div>
-
-                    <input class='btn btn-primary' type='submit' value='Submit'>
-
-                </form>
+        <div class="miniContainer">
+            <div class="description">
+                <marquee behavior="" direction="">
+                    <h3>
+                        Some lines that looks like description but are not.
+                        Go on and fill the form and do not think there is
+                        going to be something interesting at the end of this
+                        line because I'm telling you, you're wasting your time.
+                        It's better that you just fill out the below stuff and
+                        not care what this line is saying or where this line is
+                        heading. Well, you've reached the end. This is the end.
+                        The dead end....................... Gotchya!!! Bwahahahahahahahahahahahahahahahahahaha
+                        <i>Gangadhar hi Shaktimaan h.</i> shhh
+                    </h3>
+                </marquee>
             </div>
+
+            <form class="forms" method="POST" action='/predict'>
+
+                <div class="form-group">
+                    <label for='SepalLength'>
+                        Sepal Length
+                    </label>
+                    <input type='text' name="SepalLength" placeholder="Enter the Sepal Length">
+                </div>
+
+                <div class="form-group">
+                    <label for='SepalWidth'>
+                        Sepal Width
+                    </label>
+                    <input type='text' name="SepalWidth" placeholder="Enter the Sepal Width">
+                </div>
+
+                <div class="form-group">
+                    <label for='PetalLength'>
+                        Petal Length
+                    </label>
+                    <input type='text' name="PetalLength" placeholder="Enter the Petal Length">
+                </div>
+
+                <div class="form-group">
+                    <label for='PetalWidth'>
+                        Petal Width
+                    </label>
+                    <input type='text' name="PetalWidth" placeholder="Enter the Petal Width">
+                    </small>
+                </div>
+
+                <input class='submitButton' type='submit' value='Submit'>
+
+            </form>
         </div>
     </div>
-    <p>
-    ~ Parthik Bhandari
-    </br>
-        Github Repo : https://github.com/ParthikB/iris-flask
-    <hr>
+
+
+
 </body>
 
 </html>

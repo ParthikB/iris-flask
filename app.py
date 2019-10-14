@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import numpy as np
-from sklearn.externals import joblib
+import joblib
 
 app = Flask(__name__)
 
@@ -18,7 +18,6 @@ def home():
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     if request.method == 'POST':
-        print("it's working")
         try:
             # Taking the inputs and saving them to a variable
             SepalLength = float(request.form['SepalLength'])
