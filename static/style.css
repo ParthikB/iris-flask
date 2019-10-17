@@ -1,0 +1,15 @@
+@charset "utf-8";
+body h1 {
+	margin-top: 41px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-weight: 100;
+	font-size: xx-large;
+	text-align: center;
+	letter-spacing: 17px;
+	border-left: 21px solid #000000;
+	background-color: #214B53;
+	color: #FFFFFF;
+
+}
