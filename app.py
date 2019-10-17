@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request
 import numpy as np
-from sklearn.externals import joblib
+import joblib
+import os
 
-app = Flask(__name__)
+TEMPLATE_DIR = os.path.abspath('../endToend/templates')
+STATIC_DIR = os.path.abspath('../endToend/static')
+
+app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
 
 # Loading the model
 model_file = open('model.pkl', 'rb')
@@ -18,26 +22,25 @@ def home():
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     if request.method == 'POST':
-        print("it's working")
-        try:
-            # Taking the inputs and saving them to a variable
-            SepalLength = float(request.form['SepalLength'])
-            SepalWidth  = float(request.form['SepalWidth'])
-            PetalLength = float(request.form['PetalLength'])
-            PetalWidth  = float(request.form['PetalWidth'])
-            
-            # Converting the inputs into a numpy array
-            pred_args = np.array([SepalLength, SepalWidth, PetalLength, PetalWidth]).reshape(1, -1)
-            
-            # Predicting the Label
-            model_prediction = model.predict(pred_args)[0]
-            model_prediction = labels[model_prediction]
+        # try:
+        # Taking the inputs and saving them to a variable
+        SepalLength = float(request.form['SepalLength'])
+        SepalWidth  = float(request.form['SepalWidth'])
+        PetalLength = float(request.form['PetalLength'])
+        PetalWidth  = float(request.form['PetalWidth'])
+        
+        # Converting the inputs into a numpy array
+        pred_args = np.array([SepalLength, SepalWidth, PetalLength, PetalWidth]).reshape(1, -1)
+        
+        # Predicting the Label
+        model_prediction = model.predict(pred_args)[0]
+        model_prediction = labels[model_prediction]
 
-        except:
-            return 'Invalid Values entered!'
+        # except:
+        #     return 'Invalid Values entered!'
 
     return render_template('predict.html', prediction = model_prediction)
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

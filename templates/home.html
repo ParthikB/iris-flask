@@ -1,74 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>Iris Prediction</title>
+	<meta charset="utf-8">
+	<title>test</title>
+	<link rel= "stylesheet" type= "text/css" href= '{{ url_for("static", filename="style.css") }}'>
+
+
 </head>
 
-<body>
-    <h1>
-        <div style="text-align:center">
-            <font color="red">Iris Class Prediction</font>
-        </div>
-    </h1>
-    <hr></br>
-    <h3>
-        Some lines that looks like description but are not.
-    </h3>
-    <hr></br>
+<body style="text-align: center">
 
-    <div class='container'>
-        <div class='row'>
-            <div class='col-6'>
-                <form method="POST" action='/predict'>
+	<h1>Iris Prediction </h1>
+	<form class="forms" method="POST" action="/predict">
 
-                    <div class="form-group">
-                        <label for='SepalLength'>
-                            <p class='font-weight-bold'>Sepal Length</p>
-                        </label>
-                        <input type='text' name="SepalLength">
-                        <small id='NYHelp' class='form-text text-muted'>Enter the Sepal Length</small>
-                    </div>
+		<label for="SepalLength" class="formGroup">Sepal Length:</label>
+		<input name="SepalLength" type="text" placeholder="Enter the Sepal Length">
 
-                    <div class="form-group">
-                        <label for='SepalWidth'>
-                            <p class='font-weight-bold'>SepalWidth</p>
-                        </label>
-                        <input type='text' name="SepalWidth">
-                        <small id='NYHelp' class='form-text text-muted'>Enter the Sepal Width</small>
-                    </div>
+		<label for="SepalWidth" class="formGroup">Sepal Width</label>
+		<input name="SepalWidth" type="text" placeholder="Enter the Sepal Width">
 
-                    <div class="form-group">
-                        <label for='PetalLength'>
-                            <p class='font-weight-bold'>PetalLength</p>
-                        </label>
-                        <input type='text' name="PetalLength">
-                        <small id='NYHelp' class='form-text text-muted'>Enter the Petal Length</small>
-                    </div>
+		<label for="PetalLength" class="formGroup">Petal Length</label>
+		<input name="PetalLength" type="text" placeholder="Enter the Petal Length">
 
-                    <div class="form-group">
-                        <label for='PetalWidth'>
-                            <p class='font-weight-bold'>PetalWidth</p>
-                        </label>
-                        <input type='text' name="PetalWidth">
-                        <small id='NYHelp' class='form-text text-muted'>Enter the Petal Width>
-                        </small>
-                    </div>
+		<label for="PetalWidth" class="formGroup">Petal Width</label>
+		<input name="PetalWidth" type="text" placeholder="Enter the Petal Width">
 
-                    <input class='btn btn-primary' type='submit' value='Submit'>
-
-                </form>
-            </div>
-        </div>
-    </div>
-    <p>
-    ~ Parthik Bhandari
-    </br>
-        Github Repo : https://github.com/ParthikB/iris-flask
-    <hr>
+		<br>
+		<hr>
+		<input type="submit" name="submit" id="submit" value="Submit">
+	</form>
 </body>
 
 </html>
