@@ -3,10 +3,11 @@ import numpy as np
 import joblib
 import os
 
-TEMPLATE_DIR = os.path.abspath('../endToend/templates')
-STATIC_DIR = os.path.abspath('../endToend/static')
+# TEMPLATE_DIR = os.path.abspath('../endToend/templates')
+# STATIC_DIR = os.path.abspath('../endToend/static')
 
-app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
+# app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
+app = Flask(__name__)
 
 # Loading the model
 model_file = open('model.pkl', 'rb')
